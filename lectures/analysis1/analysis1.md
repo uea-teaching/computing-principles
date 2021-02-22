@@ -10,7 +10,9 @@ Notes: introductions
 
 ---
 
-# Analysis of Algorithms: Part 1
+# Analysis of Algorithms 
+
+#### Part 1
 
 ### A Gentle Introduction
 
