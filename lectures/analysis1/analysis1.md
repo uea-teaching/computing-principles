@@ -33,6 +33,12 @@ Note: Take care with online resources, that they are uo to date and accurate
 
 ## Goal
 
+> **formally** define an algorithm
+
+--
+
+## Goal
+
 > **understand** how we compare the **performance** of different algorithms
 
 --
@@ -158,35 +164,66 @@ Note: We will relax that rule to enable runnable code in the labs!
 
 --
 
-#### Example Pseudocode
+<div class="left-center">
 
-<div class="left">
+pseudocode
 
 ```text
 
-scanArray(a[1..n], e): returns boolean
-    for i:=1 to n
-        if e==a[i]
+scanArray(array[1..n], key): returns boolean
+    for i := 1 to n
+        if key == array[i]
         return true
     return false
 
 
 ```
 
-</div>
-<div class="right">
+</div> <div class="right-center">
 
-```text
+python
 
-function scan_values(key, values):
+```python
+
+def scan_values(key, values):
     for value in values:
         if value == key:
-            return true
-    return false
+            return True
+    return False
 
 
 ```
 
 </div>
+
+---
+
+## Case Study
+
+--
+
+### Linear Scan Algorithm
+
+1. *Specification*: for an array of n values, return true if key is in values, otherwise false.
+2. *Input*: array, size n, element key
+3. *Output*: boolean - true if key is found in array, false otherwise
+
+--
+
+### Formal algorithm
+
+```text
+
+scanArray(array[1..n], key): returns boolean
+    for i := 1 to n
+        if key == array[i]
+        return true
+    return false
+
+```
+
+--
+
+# How long will this take to run?
 
 ---
