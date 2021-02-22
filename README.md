@@ -1,2 +1,3 @@
-# algorithm-analysis
-Analysis  of Algorithms
+# Computing Principles
+
+Analysis of Algorithms
