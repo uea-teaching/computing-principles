@@ -158,25 +158,35 @@ Note: We will relax that rule to enable runnable code in the labs!
 
 --
 
+#### Example Pseudocode
 
-<div class="r-fit-text">$\sum$</div>
+<div class="left">
 
----
+```text
 
-<div class="r-fit-text">$O$</div> 
+scanArray(a[1..n], e): returns boolean
+    for i:=1 to n
+        if e==a[i]
+        return true
+    return false
 
----
 
-# Definitions
+```
 
---
+</div>
+<div class="right">
 
-An asymptote of a curve is a line such that 
-the distance between the curve
-and the line approaches zero as one or
-both of the x or y coordinates tends to infinity.
+```text
 
----
+function scan_values(key, values):
+    for value in values:
+        if value == key:
+            return true
+    return false
 
+
+```
+
+</div>
 
 ---
