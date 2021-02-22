@@ -5,6 +5,8 @@
 
 !lectures/
 !lectures/assets/
+!lectures/assets/css/
+!lectures/assets/img/
 !lectures/assets/css/*.css
 !lectures/assets/img/*.jpg
 !lectures/assets/img/*.png
