@@ -14,3 +14,5 @@ Move through the slides with the arrow keys, toggle "o" to get an overview.
 
 
 ## Lectures
+
+[Analysis of Algorithms 1](https://uea-teaching.github.io/computing-principles/lectures/analysis1)
