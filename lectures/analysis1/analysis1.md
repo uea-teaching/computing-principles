@@ -176,18 +176,5 @@ both of the x or y coordinates tends to infinity.
 
 ---
 
-# Summation
-
-<div class="left">
-
-We use the Greek letter 'Sigma' to denote summation.
-
-</div><div class="right"> 
-
-![image](../assets/img/sigma.png) 
-
-</div>
-
----
 
 ---
