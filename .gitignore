@@ -2,3 +2,13 @@
 
 !.gitignore
 !README.md
+
+!lectures/
+!lectures/assets/
+!lectures/assets/css/*.css
+!lectures/assets/img/*.jpg
+!lectures/assets/img/*.png
+
+!lectures/analysis1/
+!lectures/analysis1/*.md
+!lectures/analysis1/*.html
