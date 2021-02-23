@@ -254,6 +254,8 @@ Note: Run the code, and use a stop watch...
 
 --
 
+## Independent of hardware
+
 Remove the variable of what machine the algorithm is being run on.
 
 Multiple runs on the same hardware may be different...
@@ -264,7 +266,7 @@ What if there are other processes running?
 
 ### Time complexity
 
-1. The size of the input array (i.e. size of n)
+1. The size of the input array (i.e. size of $n$)
 2. Where element `key` is within the array (if at all)
 
 Note: we want to define the time complexity using only these factors
@@ -276,31 +278,23 @@ Note: we want to define the time complexity using only these factors
 We count the number of **fundamental operations** that are performed.
 
 >These will be the same over multiple runs on any hardware 
->and makes comparisons between algorithms more informative.
+>thus making comparisons between algorithms more informative.
 
 --
-
-<div class="left-center">
 
 #### algorithm
 
 ```text
-
 scanArray(array[1..n], key): boolean
     for i := 1 to n
         if key == array[i]
         return true
     return false
-
-
 ```
-
-</div> <div class="right-center">
 
 #### operations
 
 ```text
-
 loop:
     initialisation: i := 1
     comparison: i <= n
@@ -312,10 +306,7 @@ inside loop:
 
 after loop:
     return
-
 ```
-
-</div>
 
 --
 
@@ -327,7 +318,10 @@ by counting the number of operations it performs.
 
 --
 
-We could include all operations, but many are one-off and incidental to the overall runtime.
+We could include all operations...
+
+but many are one-off and incidental to the overall runtime.
+<!-- .element: class="fragment" -->
 
 --
 
@@ -359,7 +353,8 @@ after loop:
 
 #### Which operations do we count?
 
-We could count them all, but for simplicity we will only count the operation at the heart of the algorithm.
+we will only count the operation at the heart of the algorithm.
+<!-- .element: class="fragment" -->
 
 ---
 
@@ -375,12 +370,15 @@ How many times is the fundamental operation performed?
 
 --
 
-### Counting Fundamental Operation
+### Counting Fundamental Operations
 
-Size of the input array
+**Two** things to consider...
 <!-- .element: class="fragment" -->
 
-Where `key` is in the array
+**Size** of the input array
+<!-- .element: class="fragment" -->
+
+**Where** is ` key ` in the array
 <!-- .element: class="fragment" -->
 
 
@@ -395,11 +393,11 @@ than if e isn’t in the array at all (worst case scenario is n operations)
 
 --
 
-Where `key` is in the array decides the **case**.
+Where ` key ` is in the array decides the **case**.
 
 --
 
-### Fundamental Operation
+### Counting Fundamental Operations
 
 operation   | count      | case
 ----------- | ---------- | --------
@@ -422,7 +420,7 @@ It makes sense to prepare for the worst so you know your algorithm
 will at least always work to a certain level even under the most 
 pessimistic circumstances.
 
-So in this case, the worst case is that if e==a[i] will be performed n times
+So in this case, the worst case is that if key==a[i] will be performed n times
 
 --
 
