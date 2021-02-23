@@ -218,16 +218,18 @@ def scan_values(key, values):
 
 ### Linear Scan Algorithm
 
-1. *Specification*: for an array of n values, return true if key is in values, otherwise false.
-2. *Input*: array, size n, element key
-3. *Output*: boolean - true if key is found in array, false otherwise
+1. *Specification*
+    - return true if key is in array of $n$ values, else false
+2. *Input*
+    - array of size $n$,  element key
+3. *Output*
+    - boolean - true if key is found in array, else false
 
 --
 
 ### Formal algorithm
 
 ```text
-
 scanArray(array[1..n], key): boolean
     for i := 1 to n
         if key == array[i]
