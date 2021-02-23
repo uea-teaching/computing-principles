@@ -170,9 +170,11 @@ Note: It's worth stating...
 
 ## Writing Pseudocode
 
-There is no universally accepted pseudo-code.
+There is no universally accepted pseudocode.
+<!-- .element: class="fragment" -->
 
 It *should* be language independent.
+<!-- .element: class="fragment" -->
 
 Note: We will relax that rule to enable runnable code in the labs!
 
@@ -422,7 +424,36 @@ pessimistic circumstances.
 
 So in this case, the worst case is that if key==a[i] will be performed n times
 
+---
+
+### Why Assume the Worst Case?
+
+> In good weather, a commercial airliner requires 150,000$l$ of fuel to cross the Atlantic ocean.
+<!-- .element: class="fragment" -->
+
+> In poor weather, it requires 200,000$l$ of fuel.
+<!-- .element: class="fragment" -->
+
+> In *most* circumstances it is unacceptable for an algorithm to fail.
+<!-- .element: class="fragment" -->
+
+Note: We can compare different cases, but prepare for the worst to guarantee the minimum that the algorithm can achieve.
+
 --
 
+## What actually **is** the worst case?
 
----
+For all possible outcomes...
+<!-- .element: class="fragment" -->
+
+which is the one that results in the most work being carried out?
+<!-- .element: class="fragment" -->
+
+--
+
+### Linear Scan Time Complexity
+
+$$ t(n) = n $$
+
+--
+
