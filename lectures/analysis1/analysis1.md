@@ -27,7 +27,7 @@ Note: introductions
     - Thomas H. Cormen et. al.
     - A more formal resource
 
-Note: Take care with online resources, that they are uo to date and accurate
+Note: Take care with online resources, that they are up to date and accurate
 
 ---
 
@@ -56,6 +56,7 @@ Performance for different *cases*
 --
 
 ## How Good is an Algorithm?
+<!-- .element: class="fragment" -->
 
 > in plain English...
 
@@ -145,12 +146,25 @@ What should it do? Feasible inputs, outputs or effect?
 > The second level is a more detailed, but still informal description 
 > that breaks the problem down into sub-problems.
 
+Note: some algorithms may deal with problems 
+too trivial to significantly break down.
+
 --
 
 ## Developing Algorithms
 
 > The third level, is a detailed pseudo code description, with all stages 
 > refined until the description is unambiguous.
+
+
+--
+
+## Developing Algorithms
+
+## *There is likely more than one solution!*
+<!-- .element: class="fragment" -->
+
+Note: It's worth stating...
 
 ---
 
@@ -170,7 +184,7 @@ pseudocode
 
 ```text
 
-scanArray(array[1..n], key): returns boolean
+scanArray(array[1..n], key): boolean
     for i := 1 to n
         if key == array[i]
         return true
@@ -214,7 +228,7 @@ def scan_values(key, values):
 
 ```text
 
-scanArray(array[1..n], key): returns boolean
+scanArray(array[1..n], key): boolean
     for i := 1 to n
         if key == array[i]
         return true
@@ -224,6 +238,191 @@ scanArray(array[1..n], key): returns boolean
 
 --
 
-# How long will this take to run?
+# Question?
+
+## How long will this algorithm take to run?
+
+--
+
+## A naive approach...
+
+![timer](../assets/img/clock.gif)
+
+Note: Run the code, and use a stop watch...
+
+--
+
+Remove the variable of what machine the algorithm is being run on.
+
+Multiple runs on the same hardware may be different...
+
+What if there are other processes running?
+
+--
+
+### Time complexity
+
+1. The size of the input array (i.e. size of n)
+2. Where element `key` is within the array (if at all)
+
+Note: we want to define the time complexity using only these factors
+
+--
+
+### Time complexity
+
+We count the number of **fundamental operations** that are performed.
+
+>These will be the same over multiple runs on any hardware 
+>and makes comparisons between algorithms more informative.
+
+--
+
+<div class="left-center">
+
+#### algorithm
+
+```text
+
+scanArray(array[1..n], key): boolean
+    for i := 1 to n
+        if key == array[i]
+        return true
+    return false
+
+
+```
+
+</div> <div class="right-center">
+
+#### operations
+
+```text
+
+loop:
+    initialisation: i := 1
+    comparison: i <= n
+    update: i := i + 1
+
+inside loop:
+    key == array[i]
+    return
+
+after loop:
+    return
+
+```
+
+</div>
+
+--
+
+To reiterate, we assess the time an algorithm takes
+
+i.e. its *time complexity*
+
+by counting the number of operations it performs.
+
+--
+
+We could include all operations, but many are one-off and incidental to the overall runtime.
+
+--
+
+Therefore we choose a *fundamental operation* and **characterise** the algorithm by counting these fundamental operations.
+
+Note: the time taken to execute a fundamental operation must be (approximately) the same whenever that operation is executed on any instance on the domain of an algorithm.
+
+--
+
+#### Which operations do we count?
+
+```text
+
+loop:
+    initialisation: i := 1
+    comparison: i <= n
+    update: i := i + 1
+
+inside loop:
+    key == array[i]
+    return
+
+after loop:
+    return
+
+```
+
+--
+
+#### Which operations do we count?
+
+We could count them all, but for simplicity we will only count the operation at the heart of the algorithm.
+
+---
+
+### Fundamental Operation
+
+`key == array[i]`
+
+--
+
+### Fundamental Operation
+
+How many times is the fundamental operation performed?
+
+--
+
+### Counting Fundamental Operation
+
+Size of the input array
+<!-- .element: class="fragment" -->
+
+Where `key` is in the array
+<!-- .element: class="fragment" -->
+
+
+Note:
+We want to find the number of ops for any value of n
+e.g. not 6 or 12, but relative (e.g. n operations, or n*n, etc.)
+
+There are different cases. 
+This algorithm would be much faster if e is the first element 
+(best case scenario is 1 operation) 
+than if e isn’t in the array at all (worst case scenario is n operations)
+
+--
+
+Where `key` is in the array decides the **case**.
+
+--
+
+### Fundamental Operation
+
+operation   | count      | case
+----------- | ---------- | --------
+`key == array[1]`  | op is called once      | **best** case
+`key == array[2]`  | op is called twice     |
+ |...| 
+`key == array[n]`  | op is called $n$ times | **worst** case
+
+--
+
+Generally, we assume the worst case.
+
+`key == array[i]` is performed $n$ times.
+<!-- .element: class="fragment" -->
+
+
+Note:
+Unless specifically asked to consider a different case... 
+It makes sense to prepare for the worst so you know your algorithm 
+will at least always work to a certain level even under the most 
+pessimistic circumstances.
+
+So in this case, the worst case is that if e==a[i] will be performed n times
+
+--
+
 
 ---
