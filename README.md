@@ -37,4 +37,4 @@ For example, to generate a pdf file of the first analysis lecture:
     decktape reveal  \
         --size 1600x900 \
         https://uea-teaching.github.io/computing-principles/lectures/analysis1 \
-        analysis1.
+        analysis1.pdf
