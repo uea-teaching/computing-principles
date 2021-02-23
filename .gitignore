@@ -10,6 +10,7 @@
 !lectures/assets/css/*.css
 !lectures/assets/img/*.jpg
 !lectures/assets/img/*.png
+!lectures/assets/img/*.gif
 
 !lectures/analysis1/
 !lectures/analysis1/*.md
