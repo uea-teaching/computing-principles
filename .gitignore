@@ -3,6 +3,9 @@
 !.gitignore
 !README.md
 
+!notebooks/
+!notebooks/*.ipynb
+
 !lectures/
 !lectures/assets/
 !lectures/assets/css/
