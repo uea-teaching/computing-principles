@@ -156,12 +156,11 @@ too trivial to significantly break down.
 > The third level, is a detailed pseudo code description, with all stages 
 > refined until the description is unambiguous.
 
-
 --
 
 ## Developing Algorithms
 
-## *There is likely more than one solution!*
+## *There is often more than one solution!*
 <!-- .element: class="fragment" -->
 
 Note: It's worth stating...
@@ -248,11 +247,19 @@ scanArray(array[1..n], key): boolean
 
 --
 
-## A naive approach...
+## Experimental Approach
 
 ![timer](../assets/img/clock.gif)
 
 Note: Run the code, and use a stop watch...
+
+--
+
+![linear scan](../assets/img/lin_scan_experiment.png)
+
+--
+
+![sum to n](../assets/img/sum_experiment.png)
 
 --
 
@@ -457,3 +464,19 @@ $$ t(n) = n $$
 
 --
 
+### Run Times
+
+<div style="font-size:0.7em">
+
+| $n$ | $O(1)$ | $O(log(n))$ | $O(n)$ | $O(n log(n))$ | $O(n^2)$ | $O(2^n)$ | $O(n!)$ |
+|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| $  8$ | $1$ | $2.079$ | $  8$ | $16.636$  | $64$    | $  256$              | $40320$|
+| $ 16$ | $1$ | $2.773$ | $ 16$ | $44.361$  | $256$   | $65536$              | $2.092\times10^{13}$|
+| $ 32$ | $1$ | $3.466$ | $ 32$ | $110.904$	| $1024$  | $4.295\times10^{9}$  | $2.631\times10^{35}$|
+| $ 64$ | $1$ | $4.159$ | $ 64$ | $266.169$	| $4096$  | $1.845\times10^{19}$ | $1.269\times10^{89}$|
+| $128$ | $1$ | $4.852$ | $128$ | $621.060$	| $16384$ | $3.403\times10^{38}$ | $3.856\times10^{215}$|
+| $256$ | $1$ | $5.545$ | $256$ | $1419.565$| $65536$ | $1.158\times10^{77}$ | $8.578\times10^{506}$|
+
+</div>
+
+---
