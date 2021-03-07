@@ -8,7 +8,7 @@ Room SCI 2.16a
 
 Note: introductions
 
----
+--
 
 # Analysis of Algorithms 
 
@@ -16,9 +16,9 @@ Note: introductions
 
 ### A Gentle Introduction
 
----
+--
 
-# Reading
+## Reading
 
 - Data Structures and Algorithms
     - Michael T. Goodrich
@@ -28,6 +28,15 @@ Note: introductions
     - A more formal resource
 
 Note: Take care with online resources, that they are up to date and accurate
+
+--
+
+## Synopsis
+
+1. Defining and Developing Algorithms
+2. Experimental Analysis
+3. Analytic Characterisation
+4. Big $O$ notation
 
 ---
 
@@ -270,7 +279,7 @@ scanArray(array[1..n], key): boolean
 
 </div>
 
---
+---
 
 # Question?
 
@@ -351,8 +360,8 @@ Take an approach that allows us to...
 
 ### Time complexity
 
-1. The size of the input array (i.e. size of $n$)
-2. Where element `key` is within the array (if at all)
+1. The size of the input array (i.e. size of $n$).
+2. Where element `key` is within the array (if at all).
 
 Note: we want to define the time complexity using only these factors
 
@@ -403,18 +412,25 @@ We could include all operations...
 but many are one-off and incidental to the overall runtime.
 <!-- .element: class="fragment" -->
 
---
-
-Therefore we choose a *fundamental operation* and **characterise** the algorithm by counting these fundamental operations.
-
-Note: the time taken to execute a fundamental operation must be (approximately) the same whenever that operation is executed on any instance on the domain of an algorithm.
+Note: I have already forgotten what all those operations were...
 
 --
 
+Therefore we choose a *fundamental operation* and **characterise** the 
+algorithm by counting these fundamental operations.
+
+Note: the time taken to execute a fundamental operation must 
+be (approximately) the same whenever that operation is executed 
+on any instance on the domain of an algorithm.
+
+--
+
+<!-- .slide: data-auto-animate -->
 #### Which operations do we count?
 
-```text
+<div style="font-size: 1.2em">
 
+```text[7]
 loop:
     initialisation: i := 1
     comparison: i <= n
@@ -426,15 +442,16 @@ inside loop:
 
 after loop:
     return
-
 ```
+
+</div>
 
 --
 
+<!-- .slide: data-auto-animate -->
 #### Which operations do we count?
 
 we will only count the operation at the heart of the algorithm.
-<!-- .element: class="fragment" -->
 
 ---
 
@@ -449,6 +466,8 @@ we will only count the operation at the heart of the algorithm.
 ### Fundamental Operation
 
 ## How many times is the fundamental operation performed?
+
+Note: we have defined the fundamental op, now how do we count...
 
 --
 
@@ -475,6 +494,8 @@ than if e isn’t in the array at all (worst case scenario is n operations)
 
 --
 
+### Counting Fundamental Operations
+
 Where ` key ` is in the array decides the **case**.
 
 --
@@ -490,7 +511,7 @@ operation   | count      | case
 
 --
 
-Generally, we assume the worst case.
+Generally, we assume the **worst** case.
 
 `key == array[i]` is performed **$n$** times.
 <!-- .element: class="fragment" -->
@@ -517,7 +538,8 @@ So in this case, the worst case is that if key==a[i] will be performed n times
 > In *most* circumstances it is unacceptable for an algorithm to fail.
 <!-- .element: class="fragment" -->
 
-Note: We can compare different cases, but prepare for the worst to guarantee the minimum that the algorithm can achieve.
+Note: We can compare different cases, but prepare for the worst 
+to guarantee the minimum that the algorithm can achieve.
 
 --
 
@@ -533,7 +555,7 @@ which is the one that results in the most work being carried out?
 
 <!-- .slide: data-auto-animate -->
 
-### Linear Scan Time Complexity
+### Linear Scan Time Complexity Function
 
 ## $$ t(n) = n $$
 
@@ -543,7 +565,6 @@ $t(n)$ is called the run time complexity function
 --
 
 <!-- .slide: data-auto-animate -->
-
 ## $$ t(n) = n $$
 
 We have **characterised** our function for the *worst* case.
@@ -551,12 +572,11 @@ We have **characterised** our function for the *worst* case.
 --
 
 <!-- .slide: data-auto-animate -->
-
 ## $$ t(n) = n $$
 
 We call this a *linear* time algorithm.
 
-We say this is *order $n$*, or...
+We say this is *order* **$n$**, or...
 <!-- .element: class="fragment" -->
 
 ### $$O(n)$$
@@ -564,6 +584,80 @@ We say this is *order $n$*, or...
 
 --
 
-# Big $O$ Notation
+<!-- .slide: data-auto-animate -->
+### Big $O$ Notation
+
+--
+
+<!-- .slide: data-auto-animate -->
+### Big $O$ Notation
+
+... describes the upper bound of the complexity.
+
+--
+
+<!-- .slide: data-auto-animate -->
+### Big $O$ Notation
+
+$$\begin{aligned}
+& f(n)  \text{ is }  O(g(n))  \newline
+& \iff \text{ for constants  } ~ c, ~ N_0 \newline
+& f(N) ≤ cg(N) \text{ for all } N > N_0
+\end{aligned}$$
+
+Note: More formally...if and only if, but don't worry about this one!
+
+--
+
+<!-- .slide: data-auto-animate -->
+### Recap: Assessing an Algorithm
+
+#### Determine the fundamental operation
+
+Note:
+It is not usually necessary to count all operations, just choose the operation at the heart of the algorithm.
+
+--
+
+<!-- .slide: data-auto-animate -->
+### Recap: Assessing an Algorithm
+
+#### Determine the case
+
+Note:
+The algorithm may take different amounts of time under different circumstances.
+Consider all cases, but, unless instructed otherwise, assess the worst case.
+
+--
+
+<!-- .slide: data-auto-animate -->
+### Recap: Assessing an Algorithm
+
+#### Form the runtime complexity function
+
+Note:
+For the selected case, count the fundamental operations.
+
+--
+
+<!-- .slide: data-auto-animate -->
+### Recap: Assessing an Algorithm
+
+#### Characterise the runtime complexity function.
+
+Note: Let's look at some examples next time.
+
+---
+
+# Summary
+
+1. Defining and Developing Algorithms
+2. Experimental Analysis
+3. Analytic Characterisation
+4. Big $O$ notation
+
+---
+
+# Questions
 
 ---
