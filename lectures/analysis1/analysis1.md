@@ -22,7 +22,7 @@ Note: introductions
 
 - Data Structures and Algorithms
     - Michael T. Goodrich
-    - Versions available for Python, Java, etc
+    - Versions available for Python and Java.
 - Introduction to Algorithms 
     - Thomas H. Cormen et. al.
     - A more formal resource
@@ -105,6 +105,8 @@ solving a **problem**, that will always **terminate**.
 Note: A reminder of a formal definition of an algorithm.
 Emphasise, always correct, and always terminate.
 
+Note: Etymology <https://www.britannica.com/biography/al-Khwarizmi>
+
 --
 
 ## What is an Algorithm?
@@ -134,14 +136,14 @@ What should it do? Feasible inputs, outputs or effect?
 
 --
 
-## Developing Algorithms 
+#### Developing Algorithms 
 
 > The first level of understanding is the human one. 
 > You should be able to explain in plain terms how the algorithm works.
 
 --
 
-## Developing Algorithms
+#### Developing Algorithms
 
 > The second level is a more detailed, but still informal description 
 > that breaks the problem down into sub-problems.
@@ -151,21 +153,21 @@ too trivial to significantly break down.
 
 --
 
-## Developing Algorithms
+#### Developing Algorithms
 
 > The third level, is a detailed pseudo code description, with all stages 
 > refined until the description is unambiguous.
 
 --
 
-## Developing Algorithms
+#### Developing Algorithms
 
 ## *There is often more than one solution!*
 <!-- .element: class="fragment" -->
 
 Note: It's worth stating...
 
----
+--
 
 ## Writing Pseudocode
 
@@ -176,6 +178,7 @@ It *should* be language independent.
 <!-- .element: class="fragment" -->
 
 Note: We will relax that rule to enable runnable code in the labs!
+I don't want you to learn another language...
 
 --
 
@@ -221,14 +224,41 @@ def scan_values(key, values):
 
 1. *Specification*
     - return true if key is in array of $n$ values, else false
+<!-- .element: class="fragment" -->
+
 2. *Input*
     - array of size $n$,  element key
+<!-- .element: class="fragment" -->
+
 3. *Output*
     - boolean - true if key is found in array, else false
+<!-- .element: class="fragment" -->
+
+
+Note: What do I mean by values? What do I mean by a key?
+We will just use integers for our example, but items could be any type.
 
 --
 
-### Formal algorithm
+### Informal Algorithm
+
+See if we can find an item in a list that matches a key...
+
+--
+
+### Informal Algorithm
+
+- Step through all items.
+     - If we find a match, return true
+<!-- .element: class="fragment" -->
+     - Return false if not found.
+<!-- .element: class="fragment" -->
+
+--
+
+### Formal Algorithm
+
+<div style="font-size: 1.85em;">
 
 ```text
 scanArray(array[1..n], key): boolean
@@ -236,8 +266,9 @@ scanArray(array[1..n], key): boolean
         if key == array[i]
         return true
     return false
-
 ```
+
+</div>
 
 --
 
@@ -255,11 +286,15 @@ Note: Run the code, and use a stop watch...
 
 --
 
-![linear scan](../assets/img/lin_scan_experiment.png)
+### Experimental Approach
+
+1. A large sample of inputs.
+2. System time for each run.
+3. Plot the results.
 
 --
 
-![sum to n](../assets/img/sum_experiment.png)
+![linear scan](../assets/img/lin_scan_experiment.png)
 
 --
 
