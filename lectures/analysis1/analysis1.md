@@ -296,15 +296,56 @@ Note: Run the code, and use a stop watch...
 
 ![linear scan](../assets/img/lin_scan_experiment.png)
 
+Note: What can we say about this plot? 
+How will this algorithm perform on your machine?
+
 --
 
-## Independent of hardware
+#### Challenges of Experimental Analysis
 
-Remove the variable of what machine the algorithm is being run on.
+What machine the algorithm is being run on.
+<!-- .element: class="fragment" -->
 
-Multiple runs on the same hardware may be different...
+Multiple runs on the same hardware may be different.
+<!-- .element: class="fragment" -->
 
 What if there are other processes running?
+<!-- .element: class="fragment" -->
+
+--
+
+#### Challenges of Experimental Analysis
+
+A limited set of test inputs.
+<!-- .element: class="fragment" -->
+
+An algorithm must be fully implemented.
+<!-- .element: class="fragment" -->
+
+Note:  
+Experiments can be done only on a limited set of test inputs
+ (and these inputs may be important).
+
+An algorithm must be fully implemented in order to  study its running time experimentally.
+
+---
+
+<!-- .slide: data-auto-animate -->
+### Moving Beyond Experimental Analysis
+
+--
+
+<!-- .slide: data-auto-animate -->
+### Moving Beyond Experimental Analysis
+
+Take an approach that allows us to...
+
+* gain independence of hardware
+<!-- .element: class="fragment" -->
+* no need for implementation
+<!-- .element: class="fragment" -->
+* all possible inputs
+<!-- .element: class="fragment" -->
 
 --
 
@@ -323,20 +364,13 @@ We count the number of **fundamental operations** that are performed.
 
 >These will be the same over multiple runs on any hardware 
 >thus making comparisons between algorithms more informative.
+<!-- .element: class="fragment" -->
 
 --
 
-#### algorithm
-
-```text
-scanArray(array[1..n], key): boolean
-    for i := 1 to n
-        if key == array[i]
-        return true
-    return false
-```
-
 #### operations
+
+<div style="font-size: 1.2em">
 
 ```text
 loop:
@@ -351,6 +385,8 @@ inside loop:
 after loop:
     return
 ```
+
+</div>
 
 --
 
@@ -402,22 +438,24 @@ we will only count the operation at the heart of the algorithm.
 
 ---
 
+<!-- .slide: data-auto-animate -->
 ### Fundamental Operation
 
-`key == array[i]`
+## `key == array[i]`
 
 --
 
+<!-- .slide: data-auto-animate -->
 ### Fundamental Operation
 
-How many times is the fundamental operation performed?
+## How many times is the fundamental operation performed?
 
 --
 
-### Counting Fundamental Operations
+<!-- .slide: data-auto-animate -->
+### Fundamental Operation
 
 **Two** things to consider...
-<!-- .element: class="fragment" -->
 
 **Size** of the input array
 <!-- .element: class="fragment" -->
@@ -454,7 +492,7 @@ operation   | count      | case
 
 Generally, we assume the worst case.
 
-`key == array[i]` is performed $n$ times.
+`key == array[i]` is performed **$n$** times.
 <!-- .element: class="fragment" -->
 
 
@@ -491,27 +529,41 @@ For all possible outcomes...
 which is the one that results in the most work being carried out?
 <!-- .element: class="fragment" -->
 
---
+---
+
+<!-- .slide: data-auto-animate -->
 
 ### Linear Scan Time Complexity
 
-$$ t(n) = n $$
+## $$ t(n) = n $$
+
+$t(n)$ is called the run time complexity function
+<!-- .element: class="fragment" -->
 
 --
 
-### Run Times
+<!-- .slide: data-auto-animate -->
 
-<div style="font-size:0.7em">
+## $$ t(n) = n $$
 
-| $n$ | $O(1)$ | $O(log(n))$ | $O(n)$ | $O(n log(n))$ | $O(n^2)$ | $O(2^n)$ | $O(n!)$ |
-|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-| $  8$ | $1$ | $2.079$ | $  8$ | $16.636$  | $64$    | $  256$              | $40320$|
-| $ 16$ | $1$ | $2.773$ | $ 16$ | $44.361$  | $256$   | $65536$              | $2.092\times10^{13}$|
-| $ 32$ | $1$ | $3.466$ | $ 32$ | $110.904$	| $1024$  | $4.295\times10^{9}$  | $2.631\times10^{35}$|
-| $ 64$ | $1$ | $4.159$ | $ 64$ | $266.169$	| $4096$  | $1.845\times10^{19}$ | $1.269\times10^{89}$|
-| $128$ | $1$ | $4.852$ | $128$ | $621.060$	| $16384$ | $3.403\times10^{38}$ | $3.856\times10^{215}$|
-| $256$ | $1$ | $5.545$ | $256$ | $1419.565$| $65536$ | $1.158\times10^{77}$ | $8.578\times10^{506}$|
+We have **characterised** our function for the *worst* case.
 
-</div>
+--
+
+<!-- .slide: data-auto-animate -->
+
+## $$ t(n) = n $$
+
+We call this a *linear* time algorithm.
+
+We say this is *order $n$*, or...
+<!-- .element: class="fragment" -->
+
+### $$O(n)$$
+<!-- .element: class="fragment" -->
+
+--
+
+# Big $O$ Notation
 
 ---
