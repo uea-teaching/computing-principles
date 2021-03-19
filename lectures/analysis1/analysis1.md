@@ -522,7 +522,7 @@ pessimistic circumstances.
 
 So in this case, the worst case is that if key==a[i] will be performed n times
 
----
+--
 
 ### Why Assume the Worst Case?
 
@@ -538,7 +538,7 @@ So in this case, the worst case is that if key==a[i] will be performed n times
 Note: We can compare different cases, but prepare for the worst 
 to guarantee the minimum that the algorithm can achieve.
 
---
+---
 
 ## What actually **is** the worst case?
 
@@ -548,7 +548,7 @@ For all possible outcomes...
 which is the one that results in the most work being carried out?
 <!-- .element: class="fragment" -->
 
----
+--
 
 <!-- .slide: data-auto-animate -->
 
@@ -589,7 +589,10 @@ We say this is *order* **$n$**, or...
 <!-- .slide: data-auto-animate -->
 ### Big $\mathcal{O}$ Notation
 
-... describes the upper bound of the complexity.
+...is used to describe an *asymptotic* upper bound
+
+> An *asymptote* is a line that a curve approaches, as it heads towards infinity
+<!-- .element: class="fragment" -->
 
 --
 
@@ -632,8 +635,7 @@ described by $\mathcal{O}$ and $\Omega$
 
 $\Theta$ describes the set of functions *between* those bounds.
 
-
---
+---
 
 <!-- .slide: data-auto-animate -->
 ### Recap: Assessing an Algorithm
@@ -641,7 +643,8 @@ $\Theta$ describes the set of functions *between* those bounds.
 #### Determine the fundamental operation
 
 Note:
-It is not usually necessary to count all operations, just choose the operation at the heart of the algorithm.
+It is not usually necessary to count all operations, 
+just choose the operation at the heart of the algorithm.
 
 --
 
@@ -677,13 +680,19 @@ Note: Let's look at some examples next time.
 
 # Summary
 
-1. Defining and Developing Algorithms
-2. Experimental Analysis
-3. Analytic Characterisation
-4. Big $O$ notation
+* Defining and Developing Algorithms
+<!-- .element: class="fragment" -->
+* Experimental Analysis
+<!-- .element: class="fragment" -->
+* Analytic Characterisation
+<!-- .element: class="fragment" -->
+* Big $\mathcal{O}$ notation
+<!-- .element: class="fragment" -->
 
----
+--
 
 # Questions
 
----
+--
+
+# Thank you
