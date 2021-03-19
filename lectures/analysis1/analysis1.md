@@ -610,7 +610,7 @@ But, it does qualify that the condition applies for sufficiently large n.
 <!-- .slide: data-auto-animate -->
 ### Big $\mathcal{O}$ Notation
 
-![big o notation](../assets/diag/big-o-graph.drawio.svg)
+![big O notation](../assets/diag/big-o-graph.drawio.svg)
 
 $f(n) = \mathcal{O}(g(n))$
 
