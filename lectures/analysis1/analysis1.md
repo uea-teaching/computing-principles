@@ -1,4 +1,5 @@
 # Analysis of Algorithms
+<!-- .slide: data-auto-animate -->
 
 Dr. David Greenwood
 
@@ -11,6 +12,7 @@ Note: introductions
 --
 
 # Analysis of Algorithms 
+<!-- .slide: data-auto-animate -->
 
 #### Part 1
 
@@ -113,8 +115,7 @@ solving a **problem**, that will always **terminate**.
 
 Note: A reminder of a formal definition of an algorithm.
 Emphasise, always correct, and always terminate.
-
-Note: Etymology <https://www.britannica.com/biography/al-Khwarizmi>
+Etymology <https://www.britannica.com/biography/al-Khwarizmi>
 
 --
 
@@ -174,7 +175,7 @@ too trivial to significantly break down.
 ## *There is often more than one solution!*
 <!-- .element: class="fragment" -->
 
-Note: It's worth stating...
+Note: It's worth stating...there may be more than one solution!
 
 --
 
@@ -196,28 +197,24 @@ I don't want you to learn another language...
 pseudocode
 
 ```text
-
 scanArray(array[1..n], key): boolean
     for i := 1 to n
         if key == array[i]
         return true
     return false
-
-
 ```
 
-</div> <div class="right-center">
+</div> 
+<div class="right-center">
 
 python
 
 ```python
-
 def scan_values(key, values):
     for value in values:
         if value == key:
             return True
     return False
-
 
 ```
 
@@ -579,33 +576,62 @@ We call this a *linear* time algorithm.
 We say this is *order* **$n$**, or...
 <!-- .element: class="fragment" -->
 
-### $$O(n)$$
+### $$\mathcal{O}(n)$$
 <!-- .element: class="fragment" -->
 
 --
 
 <!-- .slide: data-auto-animate -->
-### Big $O$ Notation
+### Big $\mathcal{O}$ Notation
 
 --
 
 <!-- .slide: data-auto-animate -->
-### Big $O$ Notation
+### Big $\mathcal{O}$ Notation
 
 ... describes the upper bound of the complexity.
 
 --
 
 <!-- .slide: data-auto-animate -->
-### Big $O$ Notation
+### Big $\mathcal{O}$ Notation
 
 $$\begin{aligned}
-& f(n)  \text{ is }  O(g(n))  \newline
-& \iff \text{ for constants  } ~ c, ~ N_0 \newline
-& f(N) ≤ cg(N) \text{ for all } N > N_0
+& f(n)  \text{ is }  \mathcal{O}(g(n))  \newline
+& \iff \text{ for constants  } ~ c, ~ n_0 \newline
+& f(n) \leq cg(n) \text{ for all } n \geq n_0
 \end{aligned}$$
 
 Note: More formally...if and only if, but don't worry about this one!
+But, it does qualify that the condition applies for sufficiently large n.
+
+--
+
+<!-- .slide: data-auto-animate -->
+### Big $\mathcal{O}$ Notation
+
+![big o notation](../assets/diag/big-o-graph.drawio.svg)
+
+$f(n) = \mathcal{O}(g(n))$
+
+--
+
+## $\Omega$
+
+Just like $\mathcal{O}$ describes an *upper* bound, 
+
+$\Omega$ describes a *lower* bound.
+
+--
+
+## $\Theta$
+
+If we have upper and lower bounds
+
+described by $\mathcal{O}$ and $\Omega$
+
+$\Theta$ describes the set of functions *between* those bounds.
+
 
 --
 
