@@ -10,10 +10,12 @@
 !lectures/assets/
 !lectures/assets/css/
 !lectures/assets/img/
+!lectures/assets/diag/
 !lectures/assets/css/*.css
 !lectures/assets/img/*.jpg
 !lectures/assets/img/*.png
 !lectures/assets/img/*.gif
+!lectures/assets/diag/*.svg
 
 !lectures/analysis1/
 !lectures/analysis1/*.md
