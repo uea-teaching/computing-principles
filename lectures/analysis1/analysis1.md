@@ -35,25 +35,34 @@ Note: Take care with online resources, that they are up to date and accurate
 
 ## Synopsis
 
-1. Defining and Developing Algorithms
-2. Experimental Analysis
-3. Analytic Characterisation
-4. Big $O$ notation
+* Defining and Developing Algorithms
+<!-- .element: class="fragment" -->
+* Experimental Analysis
+<!-- .element: class="fragment" -->
+* Analytic Characterisation
+<!-- .element: class="fragment" -->
+* Big $\mathcal{O}$ notation
+<!-- .element: class="fragment" -->
 
 ---
 
+<!-- .slide: data-auto-animate -->
 ## Goal
 
-> **formally** define an algorithm
+**formally** define an algorithm
 
 --
 
+<!-- .slide: data-auto-animate -->
 ## Goal
 
-> **understand** how we compare the **performance** of different algorithms
+understand how we *compare* the
+
+performance of **different** algorithms
 
 --
 
+<!-- .slide: data-auto-animate -->
 ## Goal
 
 Counting *fundamental operations*
@@ -80,15 +89,19 @@ website vs. algorithm b that is expected to take x*x
 
 --
 
+<!-- .slide: data-auto-animate -->
+
 ## Time and Space
 
-Time complexity - How *long* does it take to run?
+Time complexity ; How *long* does it take to run?
 <!-- .element: class="fragment" -->
 
-Space complexity - How much *memory* does it need?
+Space complexity ; How much *memory* does it need?
 <!-- .element: class="fragment" -->
 
 --
+
+<!-- .slide: data-auto-animate -->
 
 ## Time and Space
 
@@ -102,12 +115,13 @@ may increase the space complexity, and vice versa.
 
 ## Time complexity
 
-> We will focus on how long an algorithm takes to run!
+We will focus on how long an algorithm takes to run!
 
 Note: In your next year - you will explore in more depth!
 
 ---
 
+<!-- .slide: data-auto-animate -->
 ## What is an Algorithm?
 
 An algorithm is a finite **sequence** of unambiguous **instructions** for 
@@ -119,6 +133,7 @@ Etymology <https://www.britannica.com/biography/al-Khwarizmi>
 
 --
 
+<!-- .slide: data-auto-animate -->
 ## What is an Algorithm?
 
 Algorithms are *developed* through a process of *translation*, 
@@ -146,6 +161,8 @@ What should it do? Feasible inputs, outputs or effect?
 
 --
 
+<!-- .slide: data-auto-animate -->
+
 #### Developing Algorithms 
 
 > The first level of understanding is the human one. 
@@ -153,9 +170,11 @@ What should it do? Feasible inputs, outputs or effect?
 
 --
 
+<!-- .slide: data-auto-animate -->
+
 #### Developing Algorithms
 
-> The second level is a more detailed, but still informal description 
+> The second level is a more detailed, but still informal description, 
 > that breaks the problem down into sub-problems.
 
 Note: some algorithms may deal with problems 
@@ -163,17 +182,20 @@ too trivial to significantly break down.
 
 --
 
+<!-- .slide: data-auto-animate -->
+
 #### Developing Algorithms
 
-> The third level, is a detailed pseudo code description, with all stages 
+> The third level is a detailed pseudo code description, with all stages 
 > refined until the description is unambiguous.
 
 --
 
+<!-- .slide: data-auto-animate -->
+
 #### Developing Algorithms
 
-## *There is often more than one solution!*
-<!-- .element: class="fragment" -->
+### *There is often more than one solution!*
 
 Note: It's worth stating...there may be more than one solution!
 
@@ -194,7 +216,7 @@ I don't want you to learn another language...
 
 <div class="left-center">
 
-pseudocode
+`pseudocode`
 
 ```text
 scanArray(array[1..n], key): boolean
@@ -207,7 +229,7 @@ scanArray(array[1..n], key): boolean
 </div> 
 <div class="right-center">
 
-python
+`python`
 
 ```python
 def scan_values(key, values):
@@ -281,8 +303,13 @@ scanArray(array[1..n], key): boolean
 # Question?
 
 ## How long will this algorithm take to run?
+<!-- .element: class="fragment" -->
+
+Note: So, the BIG question is... how long does it take to run...
 
 --
+
+<!-- .slide: data-auto-animate -->
 
 ## Experimental Approach
 
@@ -292,11 +319,16 @@ Note: Run the code, and use a stop watch...
 
 --
 
-### Experimental Approach
+<!-- .slide: data-auto-animate -->
 
-1. A large sample of inputs.
-2. System time for each run.
-3. Plot the results.
+## Experimental Approach
+
+* A large sample of inputs.
+<!-- .element: class="fragment" -->
+* System time for each run.
+<!-- .element: class="fragment" -->
+* Plot the results.
+<!-- .element: class="fragment" -->
 
 --
 
@@ -307,20 +339,22 @@ How will this algorithm perform on your machine?
 
 --
 
-#### Challenges of Experimental Analysis
+<!-- .slide: data-auto-animate -->
+### Challenges of Experimental Analysis
 
-What machine the algorithm is being run on.
+The machine the algorithm is being run on.
 <!-- .element: class="fragment" -->
 
 Multiple runs on the same hardware may be different.
 <!-- .element: class="fragment" -->
 
-What if there are other processes running?
+There may be other processes running.
 <!-- .element: class="fragment" -->
 
 --
 
-#### Challenges of Experimental Analysis
+<!-- .slide: data-auto-animate -->
+### Challenges of Experimental Analysis
 
 A limited set of test inputs.
 <!-- .element: class="fragment" -->
@@ -355,6 +389,26 @@ Take an approach that allows us to...
 
 --
 
+<!-- .slide: data-auto-animate -->
+### Time complexity
+
+<div style="font-size: 1.85em;">
+
+```text
+scanArray(array[1..n], key): boolean
+    for i := 1 to n
+        if key == array[i]
+        return true
+    return false
+```
+
+</div>
+
+Note: let's just remind ourselves of the pseudo code...
+
+--
+
+<!-- .slide: data-auto-animate -->
 ### Time complexity
 
 1. The size of the input array (i.e. size of $n$).
@@ -364,9 +418,10 @@ Note: we want to define the time complexity using only these factors
 
 --
 
+<!-- .slide: data-auto-animate -->
 ### Time complexity
 
-We count the number of **fundamental operations** that are performed.
+We count the **fundamental operations** that are performed.
 
 >These will be the same over multiple runs on any hardware 
 >thus making comparisons between algorithms more informative.
@@ -374,7 +429,7 @@ We count the number of **fundamental operations** that are performed.
 
 --
 
-#### operations
+### operations
 
 <div style="font-size: 1.2em">
 
@@ -418,7 +473,7 @@ algorithm by counting these fundamental operations.
 
 Note: the time taken to execute a fundamental operation must 
 be (approximately) the same whenever that operation is executed 
-on any instance on the domain of an algorithm.
+on any instance on the domain of an algorithm. Independent of the machine...
 
 --
 
@@ -427,7 +482,7 @@ on any instance on the domain of an algorithm.
 
 <div style="font-size: 1.2em">
 
-```text[7]
+```text[ | 7]
 loop:
     initialisation: i := 1
     comparison: i <= n
@@ -457,6 +512,10 @@ we will only count the operation at the heart of the algorithm.
 
 ## `key == array[i]`
 
+Note: this is a comparison... 
+a comparison is often the fundamental operation in many 
+sorting and searching algorithms
+
 --
 
 <!-- .slide: data-auto-animate -->
@@ -481,6 +540,7 @@ Note: we have defined the fundamental op, now how do we count...
 
 
 Note:
+Remember I said we have 2 things to consider?
 We want to find the number of ops for any value of n
 e.g. not 6 or 12, but relative (e.g. n operations, or n*n, etc.)
 
@@ -491,12 +551,15 @@ than if e isn’t in the array at all (worst case scenario is n operations)
 
 --
 
+<!-- .slide: data-auto-animate -->
 ### Counting Fundamental Operations
 
 Where ` key ` is in the array decides the **case**.
+<!-- .element: class="fragment" -->
 
 --
 
+<!-- .slide: data-auto-animate -->
 ### Counting Fundamental Operations
 
 operation   | count      | case
@@ -545,7 +608,7 @@ to guarantee the minimum that the algorithm can achieve.
 For all possible outcomes...
 <!-- .element: class="fragment" -->
 
-which is the one that results in the most work being carried out?
+which outcome results in the most work being carried out?
 <!-- .element: class="fragment" -->
 
 --
@@ -558,6 +621,9 @@ which is the one that results in the most work being carried out?
 
 $t(n)$ is called the run time complexity function
 <!-- .element: class="fragment" -->
+
+Note: this is a measure of time not in seconds, 
+but in terms of number of operations!
 
 --
 
@@ -625,6 +691,8 @@ Just like $\mathcal{O}$ describes an *upper* bound,
 
 $\Omega$ describes a *lower* bound.
 
+Note: BIG Omega...
+
 --
 
 ## $\Theta$
@@ -634,6 +702,8 @@ If we have upper and lower bounds
 described by $\mathcal{O}$ and $\Omega$
 
 $\Theta$ describes the set of functions *between* those bounds.
+
+Note: BIG Theta...
 
 ---
 
