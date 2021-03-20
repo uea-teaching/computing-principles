@@ -707,6 +707,154 @@ Note: BIG Theta...
 
 ---
 
+#### Comparing Complexity Functions
+
+<div style="font-size:0.8em">
+
+| **character** | **function**      | **speed**  |
+|----|----|:----:|
+| constant      | $t(n) = c$        |  fastest   |
+| logarithmic   | $t(n) = log(n)$   |$\Uparrow$  |
+| linear        | $t(n) = n$        |            |
+| log linear    | $t(n) = n~log(n)$ |            |
+| polynomial    | $t(n) = n^k$      |            |
+| exponential   | $t(n) = 2^n$      |$\Downarrow$|
+| factorial     | $t(n) = n!$       |  slowest   |
+
+</div>
+
+Note: fastest and slowest always require sufficiently large n...
+By the time we get to exponential, we should be thinking of a different algorithm!
+
+--
+
+<!-- .slide: data-auto-animate -->
+#### Constant  Logarithmic  Linear
+
+Regardless the size of $n$ 
+
+*constant* algorithms finish in the **same** time.
+
+--
+
+<!-- .slide: data-auto-animate -->
+#### Constant  Logarithmic  Linear
+
+$$\begin{aligned}
+2^k =& ~n  \newline
+k   =& ~log_{2}(n)
+\end{aligned}$$
+
+Note: a quick reminder that logs *are* exponents...
+we always assume log base 2 unless clearly stated otherwise 
+
+--
+
+<!-- .slide: data-auto-animate -->
+#### Constant  Logarithmic  Linear
+
+$$\begin{aligned}
+2^k =& ~n  \newline
+k   =& ~log_{2}(n)
+\end{aligned}$$
+
+$\therefore$ if $n$ doubles, $t(n)$ increases by 1
+
+Note: a quick reminder that logs *are* exponents...
+so logarithmic growth is less than linear
+
+--
+
+<!-- .slide: data-auto-animate -->
+#### Constant  Logarithmic  Linear
+
+constant algorithms grow at the same rate as $n$
+
+--
+
+<!-- .slide: data-auto-animate -->
+#### Comparing Complexity Functions
+
+![comparing algoritms](../assets/img/complexity.png)
+
+--
+
+<!-- .slide: data-auto-animate -->
+#### Comparing Complexity Functions
+
+<div style="font-size:0.7em">
+
+| $n$ | $O(1)$ | $O(log(n))$ | $O(n)$ | $O(n log(n))$ | $O(n^2)$ | $O(2^n)$ | $O(n!)$ |
+|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| $  8$ | $1$ | $2.079$ | $  8$ | $16.636$  | $64$    | $  256$              | $40320$|
+| $ 16$ | $1$ | $2.773$ | $ 16$ | $44.361$  | $256$   | $65536$              | $2.092\times10^{13}$|
+| $ 32$ | $1$ | $3.466$ | $ 32$ | $110.904$	| $1024$  | $4.295\times10^{9}$  | $2.631\times10^{35}$|
+| $ 64$ | $1$ | $4.159$ | $ 64$ | $266.169$	| $4096$  | $1.845\times10^{19}$ | $1.269\times10^{89}$|
+| $128$ | $1$ | $4.852$ | $128$ | $621.060$	| $16384$ | $3.403\times10^{38}$ | $3.856\times10^{215}$|
+| $256$ | $1$ | $5.545$ | $256$ | $1419.565$| $65536$ | $1.158\times10^{77}$ | $8.578\times10^{506}$|
+
+</div>
+
+--
+
+<!-- .slide: data-auto-animate -->
+#### Comparing Complexity Functions
+
+if 1 fundamental operation takes 1 millisecond... 
+
+$n = 8$
+
+$40320 \approx 40s$
+
+Note: for n = 8
+
+--
+
+<!-- .slide: data-auto-animate -->
+#### Comparing Complexity Functions
+
+if 1 fundamental operation takes 1 millisecond...
+
+$n = 16$
+
+$2.092\times10^{13} \approx 630 \text{ years}$
+
+Note: for n = 16
+
+--
+
+<!-- .slide: data-auto-animate -->
+#### Comparing Complexity Functions
+
+if 1 fundamental operation takes 1 millisecond...
+
+$n = 32$
+
+$2.631\times10^{35} \approx 8 ~ septillion \text{ years}$
+
+Note: for n = 32
+
+--
+
+<!-- .slide: data-auto-animate -->
+#### Comparing Complexity Functions
+
+if 1 fundamental operation takes 1 millisecond...
+
+$n = 32$
+
+$2.631\times10^{35} \approx 8 ~ septillion \text{ years}$
+
+$8,555,783,709,787,818,000,000,000 \text{ years}$
+
+Note: for n = 32
+
+A very rough estimate of 10 trillion galaxies in the the visible universe. 
+Multiplied by the Milky Way's estimated 100 billion stars results 
+in 1 septillion stars. Although this is likely an underestimate.
+
+---
+
 <!-- .slide: data-auto-animate -->
 ### Recap: Assessing an Algorithm
 
