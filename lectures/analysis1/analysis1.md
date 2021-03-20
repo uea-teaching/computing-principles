@@ -632,6 +632,8 @@ but in terms of number of operations!
 
 We have **characterised** our function for the *worst* case.
 
+Note: We have ignored constants from incidental operations.
+
 --
 
 <!-- .slide: data-auto-animate -->
@@ -768,19 +770,13 @@ so logarithmic growth is less than linear
 <!-- .slide: data-auto-animate -->
 #### Constant  Logarithmic  Linear
 
-constant algorithms grow at the same rate as $n$
+linear algorithms grow at the same rate as $n$
 
 --
-
-<!-- .slide: data-auto-animate -->
-#### Comparing Complexity Functions
 
 ![comparing algoritms](../assets/img/complexity.png)
 
 --
-
-<!-- .slide: data-auto-animate -->
-#### Comparing Complexity Functions
 
 <div style="font-size:0.7em">
 
@@ -795,10 +791,15 @@ constant algorithms grow at the same rate as $n$
 
 </div>
 
+Note: let me draw your attention to the rightmost column...
+
+--
+
+## Some BIG numbers
+
 --
 
 <!-- .slide: data-auto-animate -->
-#### Comparing Complexity Functions
 
 if 1 fundamental operation takes 1 millisecond... 
 
@@ -811,7 +812,6 @@ Note: for n = 8
 --
 
 <!-- .slide: data-auto-animate -->
-#### Comparing Complexity Functions
 
 if 1 fundamental operation takes 1 millisecond...
 
@@ -824,7 +824,6 @@ Note: for n = 16
 --
 
 <!-- .slide: data-auto-animate -->
-#### Comparing Complexity Functions
 
 if 1 fundamental operation takes 1 millisecond...
 
@@ -837,7 +836,6 @@ Note: for n = 32
 --
 
 <!-- .slide: data-auto-animate -->
-#### Comparing Complexity Functions
 
 if 1 fundamental operation takes 1 millisecond...
 
@@ -856,7 +854,12 @@ in 1 septillion stars. Although this is likely an underestimate.
 ---
 
 <!-- .slide: data-auto-animate -->
-### Recap: Assessing an Algorithm
+### *Recap* : Assessing an Algorithm
+
+--
+
+<!-- .slide: data-auto-animate -->
+### *Recap* : Assessing an Algorithm
 
 #### Determine the fundamental operation
 
@@ -864,10 +867,15 @@ Note:
 It is not usually necessary to count all operations, 
 just choose the operation at the heart of the algorithm.
 
+We assess algorithms by identifying fundamental operations and
+counting them for any given input size
+
 --
 
 <!-- .slide: data-auto-animate -->
-### Recap: Assessing an Algorithm
+### *Recap* : Assessing an Algorithm
+
+#### Determine the fundamental operation
 
 #### Determine the case
 
@@ -875,24 +883,36 @@ Note:
 The algorithm may take different amounts of time under different circumstances.
 Consider all cases, but, unless instructed otherwise, assess the worst case.
 
+The number of ops may vary depending on the input 
+(ordering of the data affects linear scan, for example)
+
 --
 
 <!-- .slide: data-auto-animate -->
-### Recap: Assessing an Algorithm
+### *Recap* : Assessing an Algorithm
+
+#### Determine the fundamental operation
+
+#### Determine the case
 
 #### Form the runtime complexity function
 
-Note:
-For the selected case, count the fundamental operations.
+Note: For the selected case, count the fundamental operations.
 
 --
 
 <!-- .slide: data-auto-animate -->
-### Recap: Assessing an Algorithm
+### *Recap* : Assessing an Algorithm
+
+#### Determine the fundamental operation
+
+#### Determine the case
+
+#### Form the runtime complexity function
 
 #### Characterise the runtime complexity function.
 
-Note: Let's look at some examples next time.
+Note: Let's look at some more examples next time.
 
 ---
 
@@ -909,7 +929,7 @@ Note: Let's look at some examples next time.
 
 --
 
-# Questions
+# Questions?
 
 --
 
