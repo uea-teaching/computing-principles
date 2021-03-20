@@ -774,7 +774,7 @@ linear algorithms grow at the same rate as $n$
 
 --
 
-![comparing algoritms](../assets/img/complexity.png)
+![comparing algorithms](../assets/img/complexity.png)
 
 --
 
