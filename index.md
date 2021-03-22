@@ -12,6 +12,7 @@ by navigating [here](https://github.com/uea-teaching/computing-principles/).
 
 Move through the slides with the arrow keys, toggle "o" to get an overview.
 
+Some slides have additional notes. Press "s" to view speaker notes.
 
 ## Lectures
 
