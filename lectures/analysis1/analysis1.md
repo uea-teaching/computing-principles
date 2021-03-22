@@ -742,8 +742,15 @@ But, it does qualify that the condition applies for sufficiently large n.
 
 $f(n) = \mathcal{O}(g(n))$
 
-Note: In many contexts, the assumption that we are interested in the growth 
+Note: Just a SKETCH
+
+In many contexts, the assumption that we are interested in the growth 
 rate as the variable n goes to infinity is left unstated.
+
+Here we see that the function f(n) is BOUND above by cg(n).
+Look at the lower values of n. it is not bound here. 
+That is why we need sufficiently large n.
+Remember those operations we ignored?
 
 --
 
@@ -753,7 +760,7 @@ Just like $\mathcal{O}$ describes an *upper* bound,
 
 $\Omega$ describes a *lower* bound.
 
-Note: BIG Omega...
+Note: BIG Omega...this is just FYI
 
 --
 
@@ -765,7 +772,7 @@ described by $\mathcal{O}$ and $\Omega$
 
 $\Theta$ describes the set of functions *between* those bounds.
 
-Note: BIG Theta...
+Note: BIG Theta...this is just FYI
 
 ---
 
@@ -835,6 +842,9 @@ linear algorithms grow at the same rate as $n$
 --
 
 ![comparing algorithms](../assets/img/complexity.png)
+
+Note: here are some common characterisations
+Watch out for the steep curves 
 
 --
 
