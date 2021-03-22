@@ -7,7 +7,9 @@ david.greenwood@uea.ac.uk
 
 Room SCI 2.16a
 
-Note: introductions
+Note: introductions - hello
+House keeping, what is going on this week...
+Please take notes! I don't like busy slides much...
 
 --
 
@@ -44,12 +46,17 @@ Note: Take care with online resources, that they are up to date and accurate
 * Big $\mathcal{O}$ notation
 <!-- .element: class="fragment" -->
 
+Note: So this is what I intend to to cover in this lecture.
+Some of these may be entirely new topics. Don't worry, we will go slowly.
+
 ---
 
 <!-- .slide: data-auto-animate -->
 ## Goal
 
 **formally** define an algorithm
+
+Note: we want to be certain what we mean when we discuss algorithms.
 
 --
 
@@ -59,6 +66,8 @@ Note: Take care with online resources, that they are up to date and accurate
 understand how we *compare* the
 
 performance of **different** algorithms
+
+Note: the same problem could be solved by different algorithms, how do we compare? 
 
 --
 
@@ -72,6 +81,8 @@ Performance for different *cases*
 
 *Run-time complexity* as a function of problem size
 <!-- .element: class="fragment" -->
+
+Note: this is how we answer the question - How do we compare?
 
 --
 
@@ -99,6 +110,9 @@ Time complexity ; How *long* does it take to run?
 Space complexity ; How much *memory* does it need?
 <!-- .element: class="fragment" -->
 
+Note: *not* the theory of relativity...
+We only really have two concerns with the performance of an algorithm.
+
 --
 
 <!-- .slide: data-auto-animate -->
@@ -117,7 +131,7 @@ may increase the space complexity, and vice versa.
 
 We will focus on how long an algorithm takes to run!
 
-Note: In your next year - you will explore in more depth!
+Note: In your next year - you will explore analysis in more depth!
 
 ---
 
@@ -131,6 +145,8 @@ Note: A reminder of a formal definition of an algorithm.
 Emphasise, always correct, and always terminate.
 Etymology <https://www.britannica.com/biography/al-Khwarizmi>
 
+Al-Khwārizmī, 8th century Baghdad...
+
 --
 
 <!-- .slide: data-auto-animate -->
@@ -138,6 +154,8 @@ Etymology <https://www.britannica.com/biography/al-Khwarizmi>
 
 Algorithms are *developed* through a process of *translation*, 
 from an *informal* description to a *formal* description
+
+Note: we don't always choose - we have to develop! 
 
 --
 
@@ -167,6 +185,8 @@ What should it do? Feasible inputs, outputs or effect?
 
 > The first level of understanding is the human one. 
 > You should be able to explain in plain terms how the algorithm works.
+
+Note: real back of envelope stuff - nothing to do with computers necessarily.
 
 --
 
@@ -198,6 +218,7 @@ too trivial to significantly break down.
 ### *There is often more than one solution!*
 
 Note: It's worth stating...there may be more than one solution!
+And, some problems may have no solution... we wont concern ourselves with those!
 
 --
 
@@ -242,6 +263,10 @@ def scan_values(key, values):
 
 </div>
 
+Note: an example of pseudo code, compared with python.
+Some very high level languages are quite close to English, 
+and therefore quite descriptive.
+
 ---
 
 ## Case Study
@@ -265,6 +290,7 @@ def scan_values(key, values):
 
 Note: What do I mean by values? What do I mean by a key?
 We will just use integers for our example, but items could be any type.
+Anything for which we could make a comparison, and say true or false.
 
 --
 
@@ -282,6 +308,8 @@ See if we can find an item in a list that matches a key...
      - Return false if not found.
 <!-- .element: class="fragment" -->
 
+Note: breaking it down a bit
+
 --
 
 ### Formal Algorithm
@@ -297,6 +325,9 @@ scanArray(array[1..n], key): boolean
 ```
 
 </div>
+
+note: Here is some pseudo code. 
+So, we hold on to the idea that we index an array in order, to find an item.
 
 ---
 
@@ -316,6 +347,7 @@ Note: So, the BIG question is... how long does it take to run...
 ![timer](../assets/img/clock.gif)
 
 Note: Run the code, and use a stop watch...
+Seems a reasonable approach... let's do it!
 
 --
 
@@ -329,6 +361,9 @@ Note: Run the code, and use a stop watch...
 <!-- .element: class="fragment" -->
 * Plot the results.
 <!-- .element: class="fragment" -->
+
+Note: so this is what we need for an experiment
+we wont actually use a stop watch - we will use the system clock.
 
 --
 
@@ -351,6 +386,8 @@ Multiple runs on the same hardware may be different.
 There may be other processes running.
 <!-- .element: class="fragment" -->
 
+Note: there are a number of machine dependent considerations
+
 --
 
 <!-- .slide: data-auto-animate -->
@@ -366,7 +403,8 @@ Note:
 Experiments can be done only on a limited set of test inputs
  (and these inputs may be important).
 
-An algorithm must be fully implemented in order to  study its running time experimentally.
+An algorithm must be fully implemented in order to 
+study its running time experimentally. Otherwise, how do we test it?
 
 ---
 
@@ -414,7 +452,8 @@ Note: let's just remind ourselves of the pseudo code...
 1. The size of the input array (i.e. size of $n$).
 2. Where element `key` is within the array (if at all).
 
-Note: we want to define the time complexity using only these factors
+Note: we want to define the time complexity using only these factors.
+We then use this information to give a hardware independent analysis
 
 --
 
@@ -426,6 +465,8 @@ We count the **fundamental operations** that are performed.
 >These will be the same over multiple runs on any hardware 
 >thus making comparisons between algorithms more informative.
 <!-- .element: class="fragment" -->
+
+Note: this is the big key point of analysis. COUNTING FUNDAMENTAL operations.
 
 --
 
@@ -449,6 +490,8 @@ after loop:
 
 </div>
 
+Note: let's look at the operations...
+
 --
 
 To reiterate, we assess the time an algorithm takes
@@ -465,6 +508,7 @@ but many are one-off and incidental to the overall runtime.
 <!-- .element: class="fragment" -->
 
 Note: I have already forgotten what all those operations were...
+But, I want you to bear in mind that there are other operations involved.
 
 --
 
@@ -497,6 +541,8 @@ after loop:
 ```
 
 </div>
+
+Note: count this one
 
 --
 
@@ -611,6 +657,8 @@ For all possible outcomes...
 which outcome results in the most work being carried out?
 <!-- .element: class="fragment" -->
 
+note: this is a decent definition of the worst case
+
 --
 
 <!-- .slide: data-auto-animate -->
@@ -623,7 +671,8 @@ $t(n)$ is called the run time complexity function
 <!-- .element: class="fragment" -->
 
 Note: this is a measure of time not in seconds, 
-but in terms of number of operations!
+but in terms of number of operations! 
+I've ignore all incidental operations, like setting up the array.
 
 --
 
@@ -647,10 +696,15 @@ We say this is *order* **$n$**, or...
 ### $$\mathcal{O}(n)$$
 <!-- .element: class="fragment" -->
 
+Note: this is a pretty big concept. Anyone heard of this before?
+
 --
 
 <!-- .slide: data-auto-animate -->
 ### Big $\mathcal{O}$ Notation
+
+Note: this is a pretty big concept. Anyone heard of this before?
+let's look at some formal definitions...
 
 --
 
@@ -661,6 +715,9 @@ We say this is *order* **$n$**, or...
 
 > An *asymptote* is a line that a curve approaches, as it heads towards infinity
 <!-- .element: class="fragment" -->
+
+Note: just for sake of keeping you informed. 
+The emphasis is this is an UPPER BOUND.
 
 --
 
@@ -685,6 +742,16 @@ But, it does qualify that the condition applies for sufficiently large n.
 
 $f(n) = \mathcal{O}(g(n))$
 
+Note: Just a SKETCH
+
+In many contexts, the assumption that we are interested in the growth 
+rate as the variable n goes to infinity is left unstated.
+
+Here we see that the function f(n) is BOUND above by cg(n).
+Look at the lower values of n. it is not bound here. 
+That is why we need sufficiently large n.
+Remember those operations we ignored?
+
 --
 
 ## $\Omega$
@@ -693,7 +760,7 @@ Just like $\mathcal{O}$ describes an *upper* bound,
 
 $\Omega$ describes a *lower* bound.
 
-Note: BIG Omega...
+Note: BIG Omega...this is just FYI
 
 --
 
@@ -705,7 +772,7 @@ described by $\mathcal{O}$ and $\Omega$
 
 $\Theta$ describes the set of functions *between* those bounds.
 
-Note: BIG Theta...
+Note: BIG Theta...this is just FYI
 
 ---
 
@@ -775,6 +842,9 @@ linear algorithms grow at the same rate as $n$
 --
 
 ![comparing algorithms](../assets/img/complexity.png)
+
+Note: here are some common characterisations
+Watch out for the steep curves 
 
 --
 
