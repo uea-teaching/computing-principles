@@ -986,7 +986,7 @@ Note: Let's look at some more examples next time.
 
 ---
 
-# Summary
+# What we learnt
 
 * Defining and Developing Algorithms
 <!-- .element: class="fragment" -->
@@ -996,11 +996,3 @@ Note: Let's look at some more examples next time.
 <!-- .element: class="fragment" -->
 * Big $\mathcal{O}$ notation
 <!-- .element: class="fragment" -->
-
---
-
-# Questions?
-
---
-
-# Thank you
