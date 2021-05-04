@@ -23,3 +23,10 @@
 
 !lectures/matplotlib/
 !lectures/matplotlib/*.ipynb
+
+!labs/
+!labs/lab01
+!labs/lab02
+!labs/lab01/*.ipynb
+!labs/lab01/*.jpg
+!labs/lab02/*.ipynb
