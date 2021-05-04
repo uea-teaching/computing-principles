@@ -20,3 +20,6 @@
 !lectures/analysis1/
 !lectures/analysis1/*.md
 !lectures/analysis1/*.html
+
+!lectures/matplotlib/
+!lectures/matplotlib/*.ipynb
