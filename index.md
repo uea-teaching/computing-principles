@@ -17,3 +17,5 @@ Some slides have additional notes. Press "s" to view speaker notes.
 ## Lectures
 
 [Analysis of Algorithms 1](https://uea-teaching.github.io/computing-principles/lectures/analysis1)
+
+[Python REPL](https://uea-teaching.github.io/computing-principles/lectures/python-repl)
