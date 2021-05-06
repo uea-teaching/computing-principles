@@ -21,6 +21,10 @@
 !lectures/analysis1/*.md
 !lectures/analysis1/*.html
 
+!lectures/python-repl/
+!lectures/python-repl/*.md
+!lectures/python-repl/*.html
+
 !lectures/matplotlib/
 !lectures/matplotlib/*.ipynb
 
