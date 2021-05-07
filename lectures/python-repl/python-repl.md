@@ -115,7 +115,7 @@ type a `q`.
 --
 
 <!-- .slide: data-auto-animate -->
-this is help for the list function
+help for the list function
 
 <img src="../assets/img/py-shell-help-list.png" 
     alt="py-shell-help-print"
@@ -226,12 +226,19 @@ and enables a number of advanced features.
 
 --
 
+it is the kernel we have used in the `jupyter` environment
+
+--
+
+<!-- .slide: data-auto-animate -->
+
 in your shell, type `ipython`
 
 ![ipython-start](../assets/img/ipython-start.png)
 
 --
 
+<!-- .slide: data-auto-animate -->
 to get back to your prompt, type `CTRL-D` or `CTRL-Z`
 
 ![ipython-exit](../assets/img/ipython-exit.png)
@@ -243,6 +250,21 @@ also = to get back to your system prompt, type `exit()` or `quit()`
 
 --
 
+<!-- .slide: data-auto-animate -->
+getting help is just a `?`
+
+![ipython-help](../assets/img/ipython-help.png)
+
+--
+
+<!-- .slide: data-auto-animate -->
+you can also type `object?`
+
+![ipython-help](../assets/img/ipython-help-object.png)
+
+--
+
+<!-- .slide: data-auto-animate -->
 you can type simple expressions...
 
 ![ipython-simple](../assets/img/ipython-simple.png)
@@ -251,33 +273,41 @@ Note: the prompt is numbered...
 
 --
 
+<!-- .slide: data-auto-animate -->
 we get syntax highlighting, and completions
 
 ![ipython-complete](../assets/img/ipython-completion.png)
 
 --
 
+<!-- .slide: data-auto-animate -->
 we also get tab completion, with object awareness...
 
 ![ipython-tab-completion](../assets/img/ipython-tab-completion.png)
 
 Note: here, the interpreter is aware data[0] is a string.
 
+I notice a function that is available on the string object - zfill - what does it do? 
+
 --
 
+<!-- .slide: data-auto-animate -->
 the `whos` command shows the workspace variables.
 
 ![ipython-whos](../assets/img/ipython-whos.png)
 
-
 --
 
+<!-- .slide: data-auto-animate -->
 We can use any shell command by prefixing with `!`
 
 For example, `!ls`, `!pwd`, and `!echo`
 
+note: more on this later
+
 --
 
+<!-- .slide: data-auto-animate -->
 It's possible to capture output as a python object.
 
 ```python
@@ -290,15 +320,17 @@ Out[3]: ['/Users/davegreenwood']
 
 --
 
+<!-- .slide: data-auto-animate -->
 ## `%magics`
 
 IPython has a number of commands available specific to and provided by the kernel.
 
 --
 
+<!-- .slide: data-auto-animate -->
 ### `%edit`
 
-We can launch a file editor and write some code
+launch a file editor and write some code
 
 ```python
 In [17]: %edit
@@ -310,6 +342,41 @@ Out[17]: 'a = 123\nb = 456\nx = a*b\nprint(x)\n\n'
 
 --
 
+<!-- .slide: data-auto-animate -->
+### `%run`
+
+include code from a file and access all its variables
+
+```python
+"""run in ipython"""
+
+def bubble_sort(values):
+    n = len(values)
+    for i in range(n - 1):
+        for j in range(n - i - 1):
+            if values[j] > values[j + 1]:
+                values[j], values[j + 1] = values[j + 1], values[j]
+
+data = [9, 7, 5, 45, 67, 0, -5, 99, 1]
+
+```
+
+note: suppose we have this file, runme.py
+
+--
+
+<!-- .slide: data-auto-animate -->
+### `%run`
+
+include code from a file and access all its variables
+
+![ipython-magic-run](../assets/img/ipython-magic-run.png)
+
+note: here is the result in the console. We can see all the variables in the file with `whos`. Then we can access them in the shell.
+
+--
+
+<!-- .slide: data-auto-animate -->
 ### `%timeit`
 
 ```python
@@ -318,6 +385,26 @@ In [19]: %timeit sum(range(100))
 ```
 
 Note: timeit repeats the operation and reports the average
+
+--
+
+<!-- .slide: data-auto-animate -->
+### `%timeit`
+
+![ipython-magic-run](../assets/img/ipython-timeit-bubble.png)
+
+note: it is a slightly different experiment to the labs - perhaps
+better suited to comparing two algorithms - rather than estimating time complexity.
+
+--
+
+
+<!-- .slide: data-auto-animate -->
+### `%timeit`
+
+![ipython-magic-run](../assets/img/ipython-timeit-insertion.png)
+
+note: here we compare the runtime on my machine, of bubble and insertion sort. These algorithms both have the same time complexity but insertion is faster. WHY?
 
 --
 
@@ -344,5 +431,7 @@ Out[7]: [<matplotlib.lines.Line2D at 0x7ffa481b65e0>]
 
 Note: Gives interactive plotting to the console, but 
 I recommend the jupyter environment for this purpose.
+
+However this does give you an interactive plot window, for zooming, cropping and saving.
 
 ---
