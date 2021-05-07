@@ -328,6 +328,13 @@ IPython has a number of commands available specific to and provided by the kerne
 --
 
 <!-- .slide: data-auto-animate -->
+## `%lsmagic`
+
+a useful example is `lsmagic` - that lists all the available magics 
+
+--
+
+<!-- .slide: data-auto-animate -->
 ### `%edit`
 
 launch a file editor and write some code
@@ -435,3 +442,10 @@ I recommend the jupyter environment for this purpose.
 However this does give you an interactive plot window, for zooming, cropping and saving.
 
 ---
+
+## Conclusion
+
+Python **Shell** or *REPL*
+<!-- .element: class="fragment" -->
+**iPython** shell
+<!-- .element: class="fragment" -->
