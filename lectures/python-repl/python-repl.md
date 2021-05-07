@@ -163,7 +163,9 @@ imagine if you didn't have the internet!!!
 <!-- .slide: data-auto-animate -->
 you can type simple expressions...
 
-![py-shell-simple](../assets/img/py-shell-simple.png)
+<img src="../assets/img/py-shell-simple.png" 
+alt="py-shell-simple"
+width=1000px>
 
 Note: check out the big integers in python!!Your calculator will not do this!!
 
@@ -172,7 +174,9 @@ Note: check out the big integers in python!!Your calculator will not do this!!
 <!-- .slide: data-auto-animate -->
 secondary prompt for continuation lines...
 
-![py-shell-alt-prompt](../assets/img/py-shell-alt-prompt.png)
+<img src="../assets/img/py-shell-alt-prompt.png" 
+alt="py-shell-alt-prompt"
+width=1000px>
 
 Note: you can use tab to indent, and return moves to next line...
 
@@ -181,7 +185,9 @@ Note: you can use tab to indent, and return moves to next line...
 <!-- .slide: data-auto-animate -->
 you can write functions...
 
-![py-shell-bubble1](../assets/img/py-shell-simple-func1.png)
+<img src="../assets/img/py-shell-simple-func1.png" 
+alt="py-shell-bubble1"
+width=1000px>
 
 Note: does this one look familiar...
 
@@ -190,7 +196,9 @@ Note: does this one look familiar...
 <!-- .slide: data-auto-animate -->
 create some data...
 
-![py-shell-bubble2](../assets/img/py-shell-simple-func2.png)
+<img src="../assets/img/py-shell-simple-func2.png" 
+alt="py-shell-bubble2"
+width=1000px>
 
 Note: an unsorted list...
 
@@ -199,10 +207,11 @@ Note: an unsorted list...
 <!-- .slide: data-auto-animate -->
 and run them...
 
-![py-shell-bubble3](../assets/img/py-shell-simple-func3.png)
+<img src="../assets/img/py-shell-simple-func3.png" 
+alt="py-shell-bubble3"
+width=1000px>
 
 Note: and now it is a sorted list..
-
 The basic python shell is fine when you have only the standard library available.
 BUT, you have ipython installed, it comes with anaconda... 
 
@@ -377,7 +386,9 @@ note: suppose we have this file, runme.py
 
 include code from a file and access all its variables
 
-![ipython-magic-run](../assets/img/ipython-magic-run.png)
+<img src="../assets/img/ipython-magic-run.png" 
+alt="ipython-magic-run"
+width=1000px>
 
 note: here is the result in the console. We can see all the variables in the file with `whos`. Then we can access them in the shell.
 
