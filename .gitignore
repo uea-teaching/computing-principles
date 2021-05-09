@@ -29,6 +29,10 @@
 !lectures/jupyter/*.md
 !lectures/jupyter/*.html
 
+!lectures/system/
+!lectures/system/*.md
+!lectures/system/*.html
+
 !lectures/matplotlib/
 !lectures/matplotlib/*.ipynb
 
