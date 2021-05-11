@@ -124,7 +124,7 @@ print(path.absolute())
 
 </span>
 
-note: create a relative path, use absolute to get the absolute path
+note: here I create a relative path, then use absolute() to get the absolute path
 The absolute path includes all parents up to the root of the file system
 
 --
@@ -239,7 +239,8 @@ path = Path(r'C:\Users\davegreenwood\file.txt')
 
 </span>
 
-note: the raw string negates the need to escape the backslash for windows paths
+note: the raw string negates the need to escape the backslash for windows paths.
+I will try and get a bit done on strings next week...
 
 --
 
@@ -275,9 +276,9 @@ note: The different parts of a path are conveniently available as properties.
 
 <!-- .slide: data-background-image="../assets/img/danger.jpg" -->
 
-note: You have access to basic file system level 
+note: You have access to basic system level file
 operations such as moving and deleting. 
-These methods do not give a warning or before information or files are lost. 
+These methods do not give a warning before data or files are lost. 
 Be very careful when using these methods.
 
 --
@@ -352,6 +353,7 @@ fold = Path("dir")
 sub1 = fold.joinpath("sub1")
 sub1.mkdir(exist_ok=True, parents=True)
 ```
+
 </span>
 
 note: 
@@ -480,7 +482,7 @@ possibly slower than `shutil.copy()`
 <!-- .element: class="fragment" -->
 
 note: for interacting with system files I suggest copy2 as without much penalty
-as meta data is preserved as possible.
+as much meta data is preserved as possible.
 
 --
 
@@ -572,8 +574,9 @@ print(process.stdout.decode("utf-8"))
 pipe the output of `ls` to our python process
 <!-- .element: class="fragment" -->
 
-note: subprocess is a very advanced module, but very powerful. 
+note: subprocess is an advanced module, but very powerful. 
 You can run almost anything on your system.
+In the same way as piping stdout you can pipe stderr - for warnings and so on.
 
 Lets leave it there...
 
