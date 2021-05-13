@@ -429,6 +429,10 @@ Picture12.jpg
 
 </span>
 
+note: the pattern is not quite a regex. 
+`*` denotes any characters, you can also use `?` for any single character.
+you can match literal characters inside square brackets.
+
 ---
 
 ## copying files
