@@ -37,6 +37,10 @@
 !lectures/strings/*.md
 !lectures/strings/*.html
 
+!lectures/files/
+!lectures/files/*.md
+!lectures/files/*.html
+
 !lectures/matplotlib/
 !lectures/matplotlib/*.ipynb
 
