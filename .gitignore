@@ -33,6 +33,10 @@
 !lectures/system/*.md
 !lectures/system/*.html
 
+!lectures/strings/
+!lectures/strings/*.md
+!lectures/strings/*.html
+
 !lectures/matplotlib/
 !lectures/matplotlib/*.ipynb
 
