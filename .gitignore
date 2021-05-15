@@ -37,6 +37,10 @@
 !lectures/strings/*.md
 !lectures/strings/*.html
 
+!lectures/python-regex/
+!lectures/python-regex/*.md
+!lectures/python-regex/*.html
+
 !lectures/files/
 !lectures/files/*.md
 !lectures/files/*.html
