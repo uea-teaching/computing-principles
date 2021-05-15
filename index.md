@@ -14,6 +14,7 @@ Move through the slides with the arrow keys, toggle "o" to get an overview.
 
 Some slides have additional notes. Press "s" to view speaker notes.
 
+
 ## Lectures
 
 [Analysis of Algorithms 1](https://uea-teaching.github.io/computing-principles/lectures/analysis1)
@@ -23,3 +24,9 @@ Some slides have additional notes. Press "s" to view speaker notes.
 [Jupyter](https://uea-teaching.github.io/computing-principles/lectures/jupyter)
 
 [File System](https://uea-teaching.github.io/computing-principles/lectures/system)
+
+[Reading and Writing Files](https://uea-teaching.github.io/computing-principles/lectures/files)
+
+[Strings](https://uea-teaching.github.io/computing-principles/lectures/strings)
+
+[Regex](https://uea-teaching.github.io/computing-principles/lectures/regex)
