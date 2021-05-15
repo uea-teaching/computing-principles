@@ -621,7 +621,7 @@ note: we can also write a list of lists directly
 
 ---
 
-## Other formats
+## other formats
 
 --
 
