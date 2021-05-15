@@ -6,7 +6,7 @@ david.greenwood@uea.ac.uk
 
 Room SCI 2.16a
 
----
+--
 
 ## Resources
 
@@ -17,14 +17,14 @@ Room SCI 2.16a
 
 Note: Take care with online resources, that they are up to date and accurate
 
----
+--
 
 ## Contents
 
 - reading and writing files
 - handling special file types
 
----
+--
 
 ## Motivation
 
@@ -321,10 +321,28 @@ li*ne
 
 --
 
-## JSON 
+<!-- .slide: data-auto-animate -->
+## JSON
 ### JavaScript Object Notation
 
 https://docs.python.org/3/library/json.html
+
+--
+
+<!-- .slide: data-auto-animate -->
+## JSON
+
+
+**objects** as *key: value* pairs
+<!-- .element: class="fragment" -->
+
+**arrays** can contain objects, values, arrays
+<!-- .element: class="fragment" -->
+
+objects and arrays can be *nested* to any depth
+<!-- .element: class="fragment" -->
+
+note: a recursive approach is appropriate to navigating nested file structures.
 
 --
 
@@ -334,7 +352,8 @@ JSON exists as a `string`
 s = '{"name": "red", "values": [255, 0, 0]}'
 ```
 
-Note: This format follows the python dictionary container.
+Note: This format follows the python dictionary container, in other languages
+this data structure might be called a map, and in javascript it's an object.
 
 --
 
@@ -476,9 +495,14 @@ make the result far more human readable.
 
 The Python standard library has modules for reading and writing...
 
-`.csv` <!-- .element: class="fragment" -->
+`.html` <!-- .element: class="fragment" -->
+`.xml` <!-- .element: class="fragment" -->
+`.ini` <!-- .element: class="fragment" -->
 `.zip` <!-- .element: class="fragment" -->
 `.tar` <!-- .element: class="fragment" -->
+
+and more...
+<!-- .element: class="fragment" -->
 
 --
 
