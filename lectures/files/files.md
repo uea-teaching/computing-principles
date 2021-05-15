@@ -95,6 +95,9 @@ print(data)
 
 <!-- .element: class="fragment" -->
 
+note: for the slides, I show a string as the file argument, but open accepts
+a pathlib path object for creating cross platform solutions.
+
 --
 
 ### without using a context
@@ -346,6 +349,17 @@ note: a recursive approach is appropriate to navigating nested file structures.
 
 --
 
+<!-- .slide: data-auto-animate -->
+## JSON
+
+The JSON format only supports basic `types`
+
+User defined classes, numpy arrays, etc. are not supported.
+
+note: FYI
+
+--
+
 JSON exists as a `string`
 
 ```python
@@ -394,14 +408,6 @@ print(s)
 {"name": "red", "values": [255, 0, 0]}
 ```
 <!-- .element: class="fragment" -->
-
---
-
-### FYI
-
-The JSON format only supports basic `types`
-
-User defined classes, numpy arrays, etc. are not supported.
 
 --
 
@@ -483,9 +489,135 @@ make the result far more human readable.
 
 ---
 
+<!-- .slide: data-auto-animate -->
 ## CSV
 
 ### Comma Separated Values
+
+note: very common data format - spreadsheets, excel etc.
+the values don't need to be separated by commas
+
+--
+
+<!-- .slide: data-auto-animate -->
+## CSV
+
+tabular data - rows and columns
+<!-- .element: class="fragment" -->
+
+well suited to iterative exploration
+<!-- .element: class="fragment" -->
+
+note: csv data is tabular - not nested in a hierarchy - it is well suited
+to iteration. Unlike nested file structures.
+
+--
+
+## `example.csv`
+
+```csv
+index,name,city
+1,Alice,Aberdeen
+2,Bob,Bristol
+3,Carol,Chester
+4,Dave,Derby
+```
+
+note: file extension is irrelevant, it is the structure that matters
+
+--
+
+## CSV in Python
+
+<span style="font-size:2em">
+
+```python
+import csv
+```
+
+</span>
+
+note: because of the nature of the data, it is quite easy to parse files manually,
+but python includes a library that helps.
+
+
+--
+
+## reading
+
+```python [1-6 | 1 | 3 | 4 | 5-6 | 1-6]
+import csv
+
+with open('example.csv') as f:
+    reader = csv.reader(f)
+    for row in reader:
+        print(row)
+```
+
+note: reader is iterable
+
+--
+
+each row is a list of strings
+
+```
+['index', 'name', 'city']
+['1', 'Alice', 'Aberdeen']
+['2', 'Bob', 'Bristol']
+['3', 'Carol', 'Chester']
+['4', 'Dave', 'Derby']
+```
+
+--
+
+### delimiters
+
+<span style="font-size:2em">
+
+```python
+reader = csv.reader(file, delimiter = '\t')
+```
+</span>
+
+note: different delimiters are available with a keyword argument - this one is a tab
+we can also use the same choice of delimiter when writing...
+
+--
+
+<!-- .slide: data-auto-animate -->
+### writing
+
+```python [1-7 | 1 | 3 | 4 | 5 | 6-7 | 1-7]
+import csv
+
+with open("out.csv", "w") as f:
+    writer = csv.writer(f)
+    writer.writerow(["index", "name", "city"])
+    writer.writerow(['1', 'Alice', 'Aberdeen'])
+    writer.writerow(['2', 'Bob', 'Bristol'])
+```
+
+note: to write, we must open a file object in write mode...
+
+--
+
+<!-- .slide: data-auto-animate -->
+### writing
+
+```python
+rowlist = [
+    ['index', 'name', 'city'],
+    ['1', 'Alice', 'Aberdeen'],
+    ['2', 'Bob', 'Bristol'],
+    ['3', 'Carol', 'Chester'],
+]
+
+with open("out.csv", "w") as f:
+    writer = csv.writer(f)
+    writer.writerows(rowlist)
+```
+
+note: we can also write a list of lists directly
 
 ---
 
