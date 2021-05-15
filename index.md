@@ -29,4 +29,4 @@ Some slides have additional notes. Press "s" to view speaker notes.
 
 [Strings](https://uea-teaching.github.io/computing-principles/lectures/strings)
 
-[Regex](https://uea-teaching.github.io/computing-principles/lectures/regex)
+[Regex](https://uea-teaching.github.io/computing-principles/lectures/python-regex)
