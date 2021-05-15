@@ -640,6 +640,7 @@ and more...
 
 Third party modules are available for reading and writing...
 
+`.xlsx` <!-- .element: class="fragment" -->
 `.rar` <!-- .element: class="fragment" -->
 `.h5` <!-- .element: class="fragment" -->
 
