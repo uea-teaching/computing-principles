@@ -46,13 +46,13 @@ more than 200 minor variations
 <!-- .slide: data-auto-animate -->
 ## Regular Expressions
 
-Professor David Brailsford 
+Invented by Stephen Cole Kleene in 1951
 
 The [History](https://youtu.be/528Jc3q86F8) of regular expressions.
 
 https://youtu.be/528Jc3q86F8
 
-note: a really nice background on regex
+note: a really nice background on regex, invented by Stephen Cole Kleene (klay-nee)
 
 --
 
@@ -176,8 +176,25 @@ Split string by the occurrences of pattern.
 Compile a Pattern object.
 <!-- .element: class="fragment" -->
 
-Note: Compiled regular expression objects support the 
-following methods and attributes:
+Note: Can be a useful alternative in your programming structure instead of literal strings.
+
+--
+
+### Pattern Objects
+
+<div style="font-size: 0.75em;">
+
+*method* | **purpose**
+:---- |:----
+match()   | Matches at the beginning of the string.
+search()  | Any location where this RE matches.
+findall() | Find all matches, and returns them as a list.
+finditer()| Find all matches, and returns them as a iterator.
+
+</div>
+
+note: Compiled regular expression objects support the 
+previous methods and attributes, don't forget how to get help interactively.
 
 --
 
