@@ -46,7 +46,11 @@ more than 200 minor variations
 <!-- .slide: data-auto-animate -->
 ## Regular Expressions
 
-[History](https://youtu.be/528Jc3q86F8)
+Professor David Brailsford 
+
+The [History](https://youtu.be/528Jc3q86F8) of regular expressions.
+
+https://youtu.be/528Jc3q86F8
 
 note: a really nice background on regex
 
