@@ -56,3 +56,10 @@
 !labs/lab02/*.ipynb
 !labs/lab03
 !labs/lab03/*.ipynb
+
+!regex-notebooks/
+!regex-notebooks/*.ipynb
+!regex-notebooks/data/
+!regex-notebooks/data/*.log
+!regex-notebooks/data/*.html
+!regex-notebooks/data/*.txt
